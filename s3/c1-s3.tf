@@ -15,7 +15,7 @@ provider "aws" {
 
 
 resource "aws_s3_bucket" "b" {
-  bucket = "my-tf-test-bucket9912"
+  bucket = "shubh1212332"
   
 }
 resource "aws_s3_bucket_acl" "acl" {
@@ -27,4 +27,10 @@ resource "aws_s3_bucket_versioning" "versioning_enable" {
   versioning_configuration {
     status = "Enabled"
   }
+}
+resource "aws_s3_object_copy" "test" {
+  bucket = "shubh1212332"
+  key    = "gameoflife.war"
+  source = "/mnt/gameoflife.war"
+
 }
