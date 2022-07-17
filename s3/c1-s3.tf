@@ -28,9 +28,4 @@ resource "aws_s3_bucket_versioning" "versioning_enable" {
     status = "Enabled"
   }
 }
-resource "aws_s3_object_copy" "test" {
-  bucket = "shubh1212332"
-  key    = "gameoflife.war"
-  source = "/mnt/gameoflife.war"
 
-}
